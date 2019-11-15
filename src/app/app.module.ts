@@ -7,8 +7,15 @@ import { HelloComponent } from './hello.component';
 import { ButtonComponent } from './components/button.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
+  imports:      [ 
+    BrowserModule,
+    FormsModule
+      ],
+  declarations: [ 
+    AppComponent,
+    HelloComponent,
+    ButtonComponent
+     ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
