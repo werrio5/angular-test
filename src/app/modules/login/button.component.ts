@@ -8,10 +8,11 @@ import { AppComponent } from './app.component';
 })
 export class ButtonComponent {
 
-constructor(private router: Router,private AppComponent: AppComponent){
+constructor(private router: Router,){
 }
+
+
   onClick() {  
-    this.AppComponent.updatePreviousUrl('http://google.com');
   this.router.navigate(['home']);
   }  
 }

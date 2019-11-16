@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 
+
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -11,13 +12,19 @@ import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class AppComponent  {
-  name: Observable<string>;
+  name:string;
+  userName: Observable<string>;
 
-   private nameSubject: Subject<string>=new Subject();
+  private AppComponent: Subject<string>=new Subject();
+
   constructor() {
-    this.name= this.nameSubject.asObservable();
+    this.userName = this.AppComponent.asObservable();
+    this.name= "123";
   }
-  updatePreviousUrl(newName: string) {
-    this.nameSubject.next(newName);
+
+  updateName(newUsername: string) {
+    this.AppComponent.next(newUsername);
   }
+
 } 
+

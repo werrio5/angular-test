@@ -25,6 +25,10 @@ const appRoutes: Routes = [
     
     LoginModule
       ],
+      exports:[
+        AppComponent,
+      ],
+
   declarations: [ 
     AppComponent,
     HelloComponent,
