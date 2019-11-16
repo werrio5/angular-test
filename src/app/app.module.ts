@@ -8,10 +8,13 @@ import {LoginModule} from './modules/login/login.module'
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { LoginComponent } from './modules/login/login.component';
+import { MainComponent } from './modules/main/main.component';
 
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'home', component: MainComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ]
 
 @NgModule({
@@ -25,6 +28,7 @@ const appRoutes: Routes = [
   declarations: [ 
     AppComponent,
     HelloComponent,
+    MainComponent,
      ],
   bootstrap:    [ AppComponent ]
 })
