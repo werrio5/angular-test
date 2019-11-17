@@ -9,11 +9,10 @@ import { HeaderService } from './services/header.service';
 
 
 export class AppComponent  {
-  name:string;
   title = '';
 
   constructor(private headerService: HeaderService) {
-    this.name= "123";
+     this.headerService.setTitle('Hello, guest!');
   }
 
   ngOnInit() {

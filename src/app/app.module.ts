@@ -6,7 +6,6 @@ import { HeaderService } from './services/header.service';
 
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { LoginComponent } from './modules/login/login.component';
 import { MainComponent } from './modules/main/main.component';
 import { ButtonComponent } from './modules/login/button.component';
@@ -35,7 +34,6 @@ const appRoutes: Routes = [
 
   declarations: [ 
     AppComponent,
-    HelloComponent,
     MainComponent,
     LoginComponent,
     ButtonComponent,

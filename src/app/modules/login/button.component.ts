@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { HeaderService } from './services/header.service';
+import { HeaderService } from '../../services/header.service';
 
 @Component({
   selector: 'btn',
@@ -11,12 +11,12 @@ export class ButtonComponent  {
 
 constructor(
   private router: Router,
-//private headerService: HeaderService
+private headerService: HeaderService
 ){}
 
 
   onClick() {  
-   // this.headerService.setTitle('About');
+    this.headerService.setTitle('4trr');
   this.router.navigate(['home']);
   }  
 }
