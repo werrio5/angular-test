@@ -8,9 +8,7 @@ import { HeaderService } from './services/header.service';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './modules/login/login.component';
 import { MainComponent } from './modules/main/main.component';
-import { ButtonComponent } from './modules/login/button.component';
 import { RestService } from './services/rest.service';
-
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -36,7 +34,6 @@ const appRoutes: Routes = [
     AppComponent,
     MainComponent,
     LoginComponent,
-    ButtonComponent,
      ],
   bootstrap:    [ AppComponent ]
 })
