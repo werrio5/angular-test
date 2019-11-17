@@ -8,7 +8,8 @@ import { HeaderService } from './services/header.service';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './modules/login/login.component';
 import { MainComponent } from './modules/main/main.component';
-import { RestService } from './services/rest.service';
+import {RestService} from './services/rest.service';
+import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -21,7 +22,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    
+    HttpClientModule    
       ],
       exports:[
       ],
