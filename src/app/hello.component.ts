@@ -1,5 +1,5 @@
 import { Component, Input,OnInit} from '@angular/core';
-import { AppComponent } from './app.component';
+
 
 @Component({
   selector: 'hello',
@@ -9,14 +9,12 @@ import { AppComponent } from './app.component';
 export class HelloComponent implements OnInit{
   @Input() name: string;
 
-   constructor(private AppComponent: AppComponent) {
+   constructor() {
   }
 
   ngOnInit() {
 
   }
   
-onUpdateUrl(prevUrl: string){
-    this.AppComponent.updatePreviousUrl('http://google.com');
-  }
+
 }
