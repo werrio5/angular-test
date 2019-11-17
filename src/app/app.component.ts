@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
-
+import { HeaderService } from './header.service';
 
 @Component({
   selector: 'my-app',
@@ -10,21 +7,21 @@ import { Subject } from 'rxjs/Subject';
   styleUrls: [ './app.component.css' ]
 })
 
-@Injectable()
+
 export class AppComponent  {
   name:string;
-  userName: Observable<string>;
+  title = '';
 
-  private AppComponent: Subject<string>=new Subject();
-
-  constructor() {
-    this.userName = this.AppComponent.asObservable();
+  constructor(private headerService: HeaderService) {
     this.name= "123";
   }
 
-  updateName(newUsername: string) {
-    this.AppComponent.next(newUsername);
+  ngOnInit() {
+    this.headerService.title.subscribe(title => {
+      this.title = title;
+    });
   }
+
 
 } 
 
