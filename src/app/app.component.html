@@ -29,7 +29,16 @@ guard = ng g g
 guard тоже в провайдеры
 в routes чтобы не пускало добавить canactivate:authguard
 
-чтобы не выкидывало после ф5 - localstorage и sessionstorag
+чтобы не выкидывало после ф5 - localstorage и sessionstorage
+webstorage: npm i ngx-webstorage
+ngx-webstorage.forroot() в imports
+создаем sessionservice
+public setsessionparam()
+public getsessionparam()
+получаем в конструкторе loginservice
+сохраняем при входе
+
+заблокировать кнопку аттрибутом [disabled]="!f.valid"
 
 <hr>
 
