@@ -15,6 +15,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: MainComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'root',  loadChildren: () => import('./modules/root/root.module').then(m => m.RootModule) }
 ]
 
 @NgModule({
