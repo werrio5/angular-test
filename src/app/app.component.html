@@ -13,6 +13,11 @@
 </nav>
 </td></tr>
 </table>
+
+<p align="right" *ngIf="title!='Hello, guest!'">
+                  <button align="right" (click)="logOut()" >log out</button>
+                </p>
+      
 <hr>
 -root module
 -lazyload
