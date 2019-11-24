@@ -26,7 +26,7 @@ export class RestService {
       body: params,
       withCredentials: true
     };
-    return this.httpClient.request('POST', url, options)
+    return this.httpClient.request('GET', url, options)
       .pipe(map((response) => {
         return this.mapResponse(methodName, response);
       }));
@@ -39,6 +39,8 @@ export class RestService {
    */
   private mapResponse(methodName, response) {
     console.log(methodName + ' call result: ', response);
+    
+    //console.log(response.username)
     return response;
   }
 

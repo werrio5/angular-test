@@ -20,16 +20,17 @@ export class LoginComponent implements OnInit {
   }
 
   logIn(l:string,p:string){
-     this.headerService.setTitle('Hello, '+l+'!');
+     
      const params = {
       login: l,
       password: p
     };
     this.restService.doCall('logIn', params)
       .subscribe((res: any) => {
-        console.log(res);
+        //console.log(res);
+        this.headerService.setTitle('Hello, '+res.username+'!');
       });
-
+      
      this.router.navigate(['home']);
   }
 
