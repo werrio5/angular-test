@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RootComponent } from './root.component';
-
 import { Routes, RouterModule } from '@angular/router';
+
 
 const routes: Routes = [
   { path: '', component: RootComponent },
@@ -10,9 +10,11 @@ const routes: Routes = [
 @NgModule({
   imports: [
    // CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ],
-  exports: [RouterModule],
+  exports: [
+    RouterModule,
+    ],
   declarations: [RootComponent]
 })
 export class RootModule { }
