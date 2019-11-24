@@ -19,7 +19,7 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'root',  
   loadChildren: () => import('./modules/root/root.module').then(mod => mod.RootModule),
-  canActivate: [AuthGuardService]
+  //canActivate: [AuthGuardService]
   }
 ]
 
