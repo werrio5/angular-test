@@ -19,7 +19,7 @@ export class RestService {
    * @param params - параметры
    */
   public doCall(methodName: string, params: any) {
-    const url = 'http://localhost:8080/' + methodName;
+    const url = 'https://my-json-server.typicode.com/werrio5/fake-rest/' + methodName;
     console.log('calling ' + methodName + ' with params: ', params);
     const options = {
       headers: this.jsonHeaders,
