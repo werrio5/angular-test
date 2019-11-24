@@ -42,8 +42,10 @@ export class RestService {
    */
   private mapResponse(methodName, response) {
     console.log(methodName + ' call result: ', response);
-    //localStorage.set('token', response.token);
+    localStorage.setItem('token', response.token);
+    localStorage.setItem('username', response.username);
     //console.log(response.username)
+    console.log(response.token)
     return response;
   }
 
