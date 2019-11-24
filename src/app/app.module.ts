@@ -10,6 +10,7 @@ import { LoginComponent } from './modules/login/login.component';
 import { MainComponent } from './modules/main/main.component';
 import {RestService} from './services/rest.service';
 import {HttpClientModule} from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
 
@@ -19,7 +20,7 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'root',  
   loadChildren: () => import('./modules/root/root.module').then(mod => mod.RootModule),
-  //canActivate: [AuthGuardService]
+  canActivate: [AuthGuardService]
   }
 ]
 

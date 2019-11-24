@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {map} from 'rxjs/operators';
-import { JwtHelperService } from '@auth0/angular-jwt';
+//import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,9 @@ export class RestService {
   private jsonHeaders = new HttpHeaders({'Content-Type': 'application/json; charset=UTF-8'});
   private static DEFAULT_PATH = '/rest/';
 
-  constructor(private httpClient: HttpClient,public jwtHelper: JwtHelperService) {
+  constructor(private httpClient: HttpClient,
+  //public jwtHelper: JwtHelperService
+  ) {
   }
 
   /**
@@ -40,7 +42,7 @@ export class RestService {
    */
   private mapResponse(methodName, response) {
     console.log(methodName + ' call result: ', response);
-    localStorage.set('token', response.token);
+    //localStorage.set('token', response.token);
     //console.log(response.username)
     return response;
   }
